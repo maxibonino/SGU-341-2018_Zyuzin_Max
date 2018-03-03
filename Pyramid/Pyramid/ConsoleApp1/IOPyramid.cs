@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Collections;
 
 namespace ConsoleApp1
 {
@@ -22,7 +23,7 @@ namespace ConsoleApp1
         #endregion
 
         #region Read File 
-        public static void Read(string FileName, ref Pyramid pyramid)
+        public static void Read(string FileName)
         {
             using (StreamReader file = new StreamReader(FileName))
             {
@@ -35,9 +36,9 @@ namespace ConsoleApp1
 
                     baseOfPyramid[i] = new Point
                     {
-                        x = Cheker.ReadDouble(line[0]),
-                        y = Cheker.ReadDouble(line[1]),
-                        z = Cheker.ReadDouble(line[2])
+                        x = Checker.ReadDouble(line[0]),
+                        y = Checker.ReadDouble(line[1]),
+                        z = Checker.ReadDouble(line[2])
                     };
                 }
                
@@ -45,14 +46,14 @@ namespace ConsoleApp1
 
                 Point apex = new Point
                 {
-                    x = Cheker.ReadDouble(lineApex[0]),
-                    y = Cheker.ReadDouble(lineApex[1]),
-                    z = Cheker.ReadDouble(lineApex[2])
+                    x = Checker.ReadDouble(lineApex[0]),
+                    y = Checker.ReadDouble(lineApex[1]),
+                    z = Checker.ReadDouble(lineApex[2])
                 };
 
-                double height = Cheker.ReadDouble(file.ReadLine());
+                double height = Checker.ReadDouble(file.ReadLine());
 
-                pyramid = new Pyramid(baseOfPyramid, apex, height);
+                //List t = new List();
             }
         }
         #endregion

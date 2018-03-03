@@ -28,13 +28,20 @@ namespace ConsoleApp1
         /// <param name="height">Высота</param>
         public Pyramid(Point[] baseOfPyramid, Point apex, double height)
         {
-            this.baseOfPyramid = baseOfPyramid;
+            this.BaseOfPyramid = baseOfPyramid;
             this.apex = apex;
             this.height = height;
+        }
 
-            if (!IsExistBase())
+        public Point[] BaseOfPyramid
+        {
+            get { return baseOfPyramid; }
+            set
             {
-                throw new ArgumentException("Invalid base");
+                if (!IsExistBase(value))
+                {
+                    throw new ArgumentException("Invalid base");
+                }                
             }
         }
 
@@ -44,12 +51,12 @@ namespace ConsoleApp1
         }
 
         #region Exception
-        private bool IsExistBase()
+        private bool IsExistBase(Point[] points)
         {
-            double a = Point.GetLength(baseOfPyramid[0], baseOfPyramid[1]);
-            double b = Point.GetLength(baseOfPyramid[0], baseOfPyramid[3]);
-            double c = Point.GetLength(baseOfPyramid[1], baseOfPyramid[2]);
-            double d = Point.GetLength(baseOfPyramid[2], baseOfPyramid[3]);
+            double a = Point.GetLength(points[0], points[1]);
+            double b = Point.GetLength(points[0], points[3]);
+            double c = Point.GetLength(points[1], points[2]);
+            double d = Point.GetLength(points[2], points[3]);
             return (a < b + c + d) && (b < a + c + d) && (c < b + a + d) && (d < b + c + a);
         }
         #endregion

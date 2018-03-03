@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    static class Cheker
+    static class Checker
     {
+
         public static double ReadDouble(string num)
         {
             double result;

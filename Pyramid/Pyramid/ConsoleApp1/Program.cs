@@ -11,9 +11,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Pyramid pyramid = new Pyramid();
+            List<Point> points = IOPyramid.Read("pyramid - origin.txt");
 
-            IOPyramid.Read("pyramid - origin.txt", ref pyramid);
+            Pyramid pyramid = new Pyramid(points);
+
+
 
             pyramid.ChangePointOfBase(new Point { x = 2.5, y = 3.2, z = 4.5 }, 0);
 
