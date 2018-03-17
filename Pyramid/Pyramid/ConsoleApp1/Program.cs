@@ -1,24 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<Point> points = IOPyramid.Read("pyramid - origin.txt");
-
-            Pyramid pyramid = new Pyramid(points);
-
-
-
-            pyramid.ChangePointOfBase(new Point { x = 2.5, y = 3.2, z = 4.5 }, 0);
-
+            var data = IOPyramid.Read("pyramid - origin.txt");
+            Pyramid pyramid = new Pyramid(data);
+            pyramid.ChangePointOfBase(new Point { X = 2.5, Y = 3.2, Z = 4.5 }, 0);
             IOPyramid.Write("out.txt", pyramid);
         }
     }

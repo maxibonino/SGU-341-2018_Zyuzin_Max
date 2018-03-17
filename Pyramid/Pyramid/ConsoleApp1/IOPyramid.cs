@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Collections;
 
 namespace ConsoleApp1
 {
@@ -15,7 +12,6 @@ namespace ConsoleApp1
         {
             using (StreamWriter fileOut = new StreamWriter(FileName))
             {
-
                 fileOut.WriteLine("Площадь основания {0}", pyramid.AreaBase);
                 fileOut.WriteLine("Объём пирамиды {0}", pyramid.Volume);
             }
@@ -23,37 +19,26 @@ namespace ConsoleApp1
         #endregion
 
         #region Read File 
-        public static void Read(string FileName)
+        public static Tuple<IEnumerable<Point>, double> Read(string FileName)
         {
             using (StreamReader file = new StreamReader(FileName))
             {
-                Point[] baseOfPyramid = new Point[Pyramid.BaseNumber];
-
-                for (int i = 0; i < Pyramid.BaseNumber; i++)
+                int AmountOfPoints = Pyramid.BaseNumber + 1;
+                Point[] points = new Point[AmountOfPoints];
+                for (int i = 0; i < AmountOfPoints; i++)
                 {
                     string[] line = file.ReadLine().Split();
 
-
-                    baseOfPyramid[i] = new Point
+                    points[i] = new Point
                     {
-                        x = Checker.ReadDouble(line[0]),
-                        y = Checker.ReadDouble(line[1]),
-                        z = Checker.ReadDouble(line[2])
+                        X = Checker.Instance.ReadDouble(line[0]),
+                        Y = Checker.Instance.ReadDouble(line[1]),
+                        Z = Checker.Instance.ReadDouble(line[2])
                     };
                 }
-               
-                string[] lineApex = file.ReadLine().Split();
 
-                Point apex = new Point
-                {
-                    x = Checker.ReadDouble(lineApex[0]),
-                    y = Checker.ReadDouble(lineApex[1]),
-                    z = Checker.ReadDouble(lineApex[2])
-                };
-
-                double height = Checker.ReadDouble(file.ReadLine());
-
-                //List t = new List();
+                double height = Checker.Instance.ReadDouble(file.ReadLine());
+                return new Tuple<IEnumerable<Point>, double>(points, height);
             }
         }
         #endregion

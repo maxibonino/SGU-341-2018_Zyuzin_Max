@@ -1,73 +1,85 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-
     public class Pyramid
     {
 
         // 4 точки основания
         public const int BaseNumber = 4;
 
-        private Point[] baseOfPyramid;
+        //private IEnumerable<Point> BaseOfPyramid;
         private Point apex;
         private double height;
+        const double EPS = 1e-9;
 
         int stupidMethod;
 
         /// <summary>
         /// Введённая высота не должна отличаться от расчётной
         /// </summary>
-        /// <param name="baseOfPyramid">Массив точек основания</param>
+        /// <param name="BaseOfPyramid">Массив точек основания</param>
         /// <param name="apex">Вершина</param>
         /// <param name="height">Высота</param>
-        public Pyramid(Point[] baseOfPyramid, Point apex, double height)
+        public Pyramid(IEnumerable<Point> baseOfPyramid, Point apex, double height)
         {
-            this.BaseOfPyramid = baseOfPyramid;
-            this.apex = apex;
-            this.height = height;
+            BaseOfPyramid = baseOfPyramid;
+            Apex = apex;
+            Height = height;
         }
 
-        public Point[] BaseOfPyramid
+        public Pyramid(Tuple<IEnumerable<Point>, double> data)
+            :this(data.Item1.Take(4), data.Item1.ElementAt(4), data.Item2)
         {
-            get { return baseOfPyramid; }
-            set
-            {
-                if (!IsExistBase(value))
-                {
-                    throw new ArgumentException("Invalid base");
-                }                
-            }
+            CheckData(data);
+        }
+
+        public IEnumerable<Point> BaseOfPyramid
+        {
+            get;
+            set;
         }
 
         public Pyramid()
         {
-            this.baseOfPyramid = new Point[BaseNumber];
+            BaseOfPyramid = (IEnumerable<Point>)(new Point[BaseNumber]);
         }
 
         #region Exception
-        private bool IsExistBase(Point[] points)
+        
+        private bool IsExistBase(IEnumerable<Point> points)
         {
-            double a = Point.GetLength(points[0], points[1]);
-            double b = Point.GetLength(points[0], points[3]);
-            double c = Point.GetLength(points[1], points[2]);
-            double d = Point.GetLength(points[2], points[3]);
+            double a = Point.GetLength(points.ElementAt(0), points.ElementAt(1));
+            double b = Point.GetLength(points.ElementAt(0), points.ElementAt(3));
+            double c = Point.GetLength(points.ElementAt(1), points.ElementAt(2));
+            double d = Point.GetLength(points.ElementAt(2), points.ElementAt(3));
             return (a < b + c + d) && (b < a + c + d) && (c < b + a + d) && (d < b + c + a);
         }
         #endregion
+        private void CheckData(Tuple<IEnumerable<Point>, double> data)
+        {
+            if (data == null)
+                throw new Exception("Invalid data");
 
+            if ((data.Item2 - EPS) <= 0)
+                throw new Exception("Invalid height");
+
+            if (data.Item1 == null && data.Item1.Count() != 5)
+                throw new Exception("Invalid data!");
+
+            if (!IsExistBase(data.Item1.Take(4)))
+                throw new Exception("Wrong pyramid!");
+        }
         private double GetAreaBase()
         {
-            Point veca = baseOfPyramid[1] - baseOfPyramid[0];
-            Point vecb = baseOfPyramid[3] - baseOfPyramid[0];
+            BaseOfPyramid.ElementAt(3);
+            Point veca = BaseOfPyramid.ElementAt(1) - BaseOfPyramid.ElementAt(0);
+            Point vecb = BaseOfPyramid.ElementAt(3) - BaseOfPyramid.ElementAt(0);
 
-            double a = Point.GetLength(baseOfPyramid[0], baseOfPyramid[1]);
-            double b = Point.GetLength(baseOfPyramid[0], baseOfPyramid[3]);
+            double a = Point.GetLength(BaseOfPyramid.ElementAt(0), BaseOfPyramid.ElementAt(0));
+            double b = Point.GetLength(BaseOfPyramid.ElementAt(0), BaseOfPyramid.ElementAt(3));
 
             double cosOfab = Point.DotProduct(veca, vecb) / (a * b);
             double sinOfab = Math.Sqrt(1 - Math.Pow(cosOfab, 2));
@@ -75,6 +87,8 @@ namespace ConsoleApp1
             return a * b * sinOfab;
         }
 
+        public Point Apex { get; set; }
+        public double Height { get; set; }
         public double AreaBase
         {
             get
@@ -107,15 +121,14 @@ namespace ConsoleApp1
             stupidMethod = numOfPoint;
             if (numOfPoint < 0 || numOfPoint > 4)
                 throw new ArgumentException("Invalid argument");
-            baseOfPyramid[numOfPoint] = point;
-            
+            //BaseOfPyramid.ElementAt(numOfPoint);
         }
 
         public void ChangePointsOfBase(Point[] point)
         {
             if (point.Length == 0 || point.Length > 4)
                 throw new ArgumentException("Invalid argument");
-            baseOfPyramid = point;
+            BaseOfPyramid = point;
         }
     }
 }
