@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace Task2_Ring
 {
-    class Circle
+    public class Circle
     {
-        public double Radius { get; set; }
+        public Circle(Point center, double radius)
+        {
+            Center = center;
+            R = radius;
+        }
 
+        public double R { get; set; }
+        public Point Center { get; set; }
     }
 }
