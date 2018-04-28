@@ -6,6 +6,8 @@ namespace ADO.NET_Task_2_b
 {
     public class Ring
     {
+        private double ringRadius;
+        private Circle greaterCircle;
         public Ring(Circle greaterCircle, double ringRadius)
         {
             GreaterCircle = greaterCircle;
@@ -27,12 +29,41 @@ namespace ADO.NET_Task_2_b
             return 2 * Math.PI * RingRadius;
         }
 
+        public void ChangeCircleAndRingRadius(Circle greaterCircle, double ringRadius)
+        {
+            if (greaterCircle == null || (greaterCircle != null && greaterCircle.R < ringRadius) || ringRadius < 0)
+                throw new Exception("Invalid arguments");
+
+            this.greaterCircle = greaterCircle;
+            this.ringRadius = ringRadius;
+        }
+
         public override string ToString()
         {
             return $"Center - ({GreaterCircle.Center.X}, {GreaterCircle.Center.Y}), greater radius - {GreaterCircle.R}, lesser radius - {RingRadius}";
         }
 
-        public Circle GreaterCircle { get; set; }
-        public double RingRadius { get; set; }
+        public Circle GreaterCircle
+        {
+            get => greaterCircle;
+            set
+            {
+                if (value == null && value.R > RingRadius)
+                    throw new Exception("Wrong circle!");
+                else
+                    greaterCircle = value;
+            }
+        }
+        public double RingRadius
+        {
+            get => RingRadius;
+            set
+            {
+                if (value < 0 || (GreaterCircle != null && value > GreaterCircle.R) || GreaterCircle == null)
+                    throw new Exception("Wrong radius!");
+
+                ringRadius = value;
+            }
+        }
     }
 }
