@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task2_Ring
+﻿namespace ADO.NET_Task_2_b
 {
     public class Circle
     {

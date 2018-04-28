@@ -5,3 +5,10 @@ C:\Users\zms\Desktop\Task2\Task2\obj\Debug\Task2.csprojResolveAssemblyReference.
 C:\Users\zms\Desktop\Task2\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
 C:\Users\zms\Desktop\Task2\Task2\obj\Debug\Task2.exe
 C:\Users\zms\Desktop\Task2\Task2\obj\Debug\Task2.pdb
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\bin\Debug\Task2.exe.config
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\bin\Debug\Task2.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\bin\Debug\Task2.pdb
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\obj\Debug\Task2.csprojResolveAssemblyReference.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\obj\Debug\Task2.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2\obj\Debug\Task2.pdb

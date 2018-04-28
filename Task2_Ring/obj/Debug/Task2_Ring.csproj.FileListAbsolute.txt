@@ -1,0 +1,6 @@
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2_Ring\bin\Debug\Task2_Ring.exe.config
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2_Ring\bin\Debug\Task2_Ring.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2_Ring\bin\Debug\Task2_Ring.pdb
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2_Ring\obj\Debug\Task2_Ring.csproj.CoreCompileInputs.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2_Ring\obj\Debug\Task2_Ring.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\Task2_Ring\obj\Debug\Task2_Ring.pdb
