@@ -1,0 +1,7 @@
+C:\Users\zms\source\repos\task3\task3\bin\Debug\task3.exe.config
+C:\Users\zms\source\repos\task3\task3\bin\Debug\task3.exe
+C:\Users\zms\source\repos\task3\task3\bin\Debug\task3.pdb
+C:\Users\zms\source\repos\task3\task3\obj\Debug\task3a.csprojResolveAssemblyReference.cache
+C:\Users\zms\source\repos\task3\task3\obj\Debug\task3a.csproj.CoreCompileInputs.cache
+C:\Users\zms\source\repos\task3\task3\obj\Debug\task3.exe
+C:\Users\zms\source\repos\task3\task3\obj\Debug\task3.pdb
