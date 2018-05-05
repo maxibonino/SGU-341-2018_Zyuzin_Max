@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Ring
+﻿namespace ADO.NET_Task_2_b
 {
     public class Circle
     {
@@ -11,17 +6,18 @@ namespace Ring
         public Circle(Point center, double radius)
         {
             Center = center;
-            Radius = radius;
+            R = radius;
         }
 
-        public double Radius
+        public double R
         {
             get => radius;
             set
             {
                 if (value <= 0)
                     throw new System.Exception("Radius can't be less than zero.");
-                radius = value;
+				
+				radius = value;
             }
         }
         public Point Center { get; set; }
