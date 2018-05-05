@@ -16,6 +16,8 @@
             {
                 if (value <= 0)
                     throw new System.Exception("Radius can't be less than zero.");
+				
+				radius = value;
             }
         }
         public Point Center { get; set; }

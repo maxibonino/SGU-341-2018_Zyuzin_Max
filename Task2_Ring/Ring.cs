@@ -56,7 +56,7 @@ namespace ADO.NET_Task_2_b
         }
         public double RingRadius
         {
-            get => RingRadius;
+            get => ringRadius;
             set
             {
                 if (value < 0 || (GreaterCircle != null && value > GreaterCircle.R) || GreaterCircle == null)
