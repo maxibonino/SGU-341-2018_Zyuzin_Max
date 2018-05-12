@@ -1,0 +1,7 @@
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\obj\Debug\task3b.csprojResolveAssemblyReference.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\obj\Debug\task3b.csproj.CoreCompileInputs.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\bin\Debug\task3b.exe.config
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\bin\Debug\task3b.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\bin\Debug\task3b.pdb
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\obj\Debug\task3b.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3b\obj\Debug\task3b.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task3.Figures
 {
-    public class Ring: IDrawable
+    public class Ring : IDrawable
     {
         private double ringRadius;
         private Circle greaterCircle;
@@ -58,7 +58,7 @@ namespace task3.Figures
         }
         public double RingRadius
         {
-            get => RingRadius;
+            get => ringRadius;
             set
             {
                 if (value < 0 || (GreaterCircle != null && value > GreaterCircle.R) || GreaterCircle == null)

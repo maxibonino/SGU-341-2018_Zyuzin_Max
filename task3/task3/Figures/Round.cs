@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace task3.Figures
 {
-    class Round
+    class Round : Circle, IDrawable
     {
+        public Round(Point center, double radius)
+            :base(center, radius)
+        {
+        }
+
+        void IDrawable.Draw()
+        {
+            Draw();
+        }
+        public void Draw()
+        {
+            Console.WriteLine($"Round: center - {Center.X}, {Center.Y}; radius - {R}");
+        }
     }
 }

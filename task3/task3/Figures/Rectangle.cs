@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace task3.Figures
 {
-    public class Rectangle: IDrawable
+    public class Rectangle : IDrawable
     {
         private Point[] _points;
 

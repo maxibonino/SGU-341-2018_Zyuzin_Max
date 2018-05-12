@@ -5,3 +5,10 @@ C:\Users\zms\source\repos\task3\task3\obj\Debug\task3a.csprojResolveAssemblyRefe
 C:\Users\zms\source\repos\task3\task3\obj\Debug\task3a.csproj.CoreCompileInputs.cache
 C:\Users\zms\source\repos\task3\task3\obj\Debug\task3.exe
 C:\Users\zms\source\repos\task3\task3\obj\Debug\task3.pdb
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\obj\Debug\task3a.csprojResolveAssemblyReference.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\obj\Debug\task3a.csproj.CoreCompileInputs.cache
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\obj\Debug\task3.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\obj\Debug\task3.pdb
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\bin\Debug\task3.exe.config
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\bin\Debug\task3.exe
+C:\Users\zms\Desktop\New folder\SGU-341-2018_Zyuzin_Max\task3\task3\bin\Debug\task3.pdb

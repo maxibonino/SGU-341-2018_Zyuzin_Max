@@ -2,7 +2,7 @@
 
 namespace task3.Figures
 {
-    public class Line: IDrawable
+    public class Line : IDrawable
     {
         private Point _start;
         private Point _end;

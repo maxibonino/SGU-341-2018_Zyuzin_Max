@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task3.Figures
 {
-    public class Circle
+    public class Circle : IDrawable
     {
         private double radius;
         public Circle(Point center, double radius)
@@ -22,8 +22,15 @@ namespace task3.Figures
             {
                 if (value <= 0)
                     throw new System.Exception("Radius can't be less than zero.");
+
+                radius = value;
             }
         }
         public Point Center { get; set; }
+
+        public void Draw()
+        {
+            Console.WriteLine($"Circle: center - {Center.X}, {Center.Y}; radius - {R}");
+        }
     }
 }
